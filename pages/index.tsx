@@ -5,30 +5,40 @@ import Link from 'next/link'
 
 function Home() {
   return (
-    <ul>
-      <li>
-        <Link href="/posts/abc">
-          <a>Go to pages/posts/[pid].js</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/posts/abc?foo=bar">
-          <a>Also goes to pages/posts/[pid].js</a>
-        </Link>
-      </li>
-      <li>
-        <Link href="/posts/abc/a-comment">
-          <a>Go to pages/post/[pid]/[comment].js</a>
-        </Link>
-      </li>
+    <>
+      <Head>
+        <title>测试标题</title>
+      </Head>
+      <ul>
+        <li>
+          <Link href="/posts/abc">
+            <a>Go to pages/posts/[pid].js</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/posts/abc?foo=bar">
+            <a>Also goes to pages/posts/[pid].js</a>
+          </Link>
+        </li>
+        <li>
+          <Link href="/posts/abc/a-comment">
+            <a>Go to pages/post/[pid]/[comment].js</a>
+          </Link>
+        </li>
 
-      <li>
-        <a href="/posts/first-post">a 点击这里</a>
-        <Link href="/posts/first-post">
-          <a>Go to pages/first-post</a>
-        </Link>
-      </li>
-    </ul>
+        <li>
+          <Link href="/posts/first-post">
+            <a className={styles.a_color}>Go to pages/first-post</a>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/posts/BSR">
+            <a className={styles.a_color}>posts/BSR</a>
+          </Link>
+        </li>
+      </ul>
+    </>
   )
 }
 
